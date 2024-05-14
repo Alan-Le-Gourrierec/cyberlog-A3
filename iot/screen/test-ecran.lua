@@ -1,0 +1,6 @@
+i2c.setpins(0,19,18)
+com = i2c.attach(i2c.I2C0,i2c.MASTER,400000)
+com:start()
+com:address(0x03,false)
+com:write(0x00,address,valeur)
+com:stop()

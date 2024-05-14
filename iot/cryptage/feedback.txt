@@ -1,0 +1,3 @@
+il y à une erreur sur le premier programme de la vidéo : 
+
+non pas ch.sub() mais ch:sub()

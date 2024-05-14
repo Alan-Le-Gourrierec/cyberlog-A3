@@ -1,0 +1,86 @@
+\documentclass[french,12pt,a4paper]{report}
+
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{babel}
+\usepackage{xcolor, soul}
+%summary
+
+%margin
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=20mm,
+right=20mm,
+}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{1.5pt}
+\setlength{\headheight}{23pt}
+\fancyhead[L]{\includegraphics[scale=0.25]{../../../../../logo/Logo_UBS.png}}
+\fancyhead[RO]{\includegraphics[scale=0.25]{../../../../../logo/Logo_ensibs.png}}
+
+%footer
+\fancyfoot{}
+\renewcommand{\footrulewidth}{1.5pt}
+\fancyfoot[L]{\leftmark}
+\fancyfoot[R]{\textbf{page \thepage}}
+
+%definition style pour plain page (comme chapter pages)
+\fancypagestyle{plain}{
+\renewcommand{\headrulewidth}{1.5pt}
+\setlength{\headheight}{23pt}
+\fancyhead[L]{\includegraphics[scale=0.25]{../../../../../logo/Logo_UBS.png}}
+\fancyhead[RO]{\includegraphics[scale=0.25]{../../../../../logo/Logo_ensibs.png}}
+\fancyfoot{}
+\renewcommand{\footrulewidth}{1.5pt}
+\fancyfoot[L]{\leftmark}
+\fancyfoot[R]{\textbf{page \thepage}}
+}
+  
+%start documment 
+\begin{document}
+\begin{titlepage}
+
+%logo
+\includegraphics[scale=0.5]{../logo/logo_ensibs.png} 
+\vspace{5 cm}
+
+%page de garde
+\begin{center}
+%titre
+\Huge{\textbf{détermination de rendement}}
+\large
+%noms
+Le Gourrierec Alan | Tellier Samuel
+\today
+
+%informations complémentaire
+\end{center}
+\vspace{4 cm}
+\hspace{-0.72cm}
+\rule{1\linewidth}{1pt} 
+\large{
+\textbf{Unité d'enseignement : } MEC 1404
+\textbf{Enseignant : }S. Rebois
+\textbf{Établissement :} UFR-SSI-ENSIBS (Lorient)
+}
+\rule{1\linewidth}{1pt}
+\end{titlepage}
+
+\normalsize
+
+\newpage
+    
+\tableofcontents
+
+\newpage
+
+\end{document}

@@ -1,0 +1,72 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "path:ingénieurie-systheme  ",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:iot  ",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "path:programation-fonctionel  ",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "path:programation-imperative  ",
+      "color": {
+        "a": 1,
+        "rgb": 5402336
+      }
+    },
+    {
+      "query": "path:Economie  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
+      }
+    },
+    {
+      "query": "path: modelisation-objet  ",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
+      }
+    },
+    {
+      "query": "path:base-de-donnée-relationel  ",
+      "color": {
+        "a": 1,
+        "rgb": 9968816
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": false,
+  "textFadeMultiplier": -0.3,
+  "nodeSizeMultiplier": 1.19739583333333,
+  "lineSizeMultiplier": 1.29947916666667,
+  "collapse-forces": true,
+  "centerStrength": 0.395833333333333,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 150,
+  "scale": 0.5064859895009354,
+  "close": false
+}

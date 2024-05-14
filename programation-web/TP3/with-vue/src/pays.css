@@ -1,0 +1,27 @@
+:root {
+    --dark: #021e5b;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.dark {
+    display: flex;
+    max-width: 40px;
+}
+.dark image{
+    width: auto;
+    display: auto; 
+    border: none;
+    background-color: white;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--dark);
+    transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+}

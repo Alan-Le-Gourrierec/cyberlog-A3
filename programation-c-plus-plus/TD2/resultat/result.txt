@@ -1,0 +1,6 @@
+type 1 : 1
+type 2 : 150
+type 3 : 1
+type 4 : 206
+type 5 : 1
+type 6 : 1

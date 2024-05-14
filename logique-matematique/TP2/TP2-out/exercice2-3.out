@@ -1,0 +1,72 @@
+============================== Mace4 =================================
+Mace4 (64) version 2009-11A, November 2009.
+Process 10893 was started by alan on julien777hx,
+Wed Apr 10 16:42:59 2024
+The command was "mace4 -c -p 1".
+============================== end of head ===========================
+
+============================== INPUT =================================
+
+formulas(assumptions).
+(all x all y all z (P(x,y) & P(y,z) -> P(x,z))).
+(all x all y (P(x,y) -> P(y,x))).
+end_of_list.
+
+formulas(goals).
+(all x P(x,x)).
+end_of_list.
+    % set(print_models_tabular) -> clear(print_models).
+
+% From the command line: set(print_models_tabular).
+
+============================== end of input ==========================
+
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
+
+% Formulas that are not ordinary clauses:
+1 (all x all y all z (P(x,y) & P(y,z) -> P(x,z))) # label(non_clause).  [assumption].
+2 (all x all y (P(x,y) -> P(y,x))) # label(non_clause).  [assumption].
+3 (all x P(x,x)) # label(non_clause) # label(goal).  [goal].
+
+============================== end of process non-clausal formulas ===
+
+============================== CLAUSES FOR SEARCH ====================
+
+formulas(mace4_clauses).
+-P(x,y) | -P(y,z) | P(x,z).
+-P(x,y) | P(y,x).
+-P(c1,c1).
+end_of_list.
+
+============================== end of clauses for search =============
+
+% There are no natural numbers in the input.
+
+============================== DOMAIN SIZE 2 =========================
+
+ c1 : 0
+
+ P :
+      | 0 1
+    --+----
+    0 | 0 0
+    1 | 0 0
+
+============================== STATISTICS ============================
+
+For domain size 2.
+
+Current CPU time: 0.00 seconds (total CPU time: 0.00 seconds).
+Ground clauses: seen=13, kept=13.
+Selections=3, assignments=3, propagations=2, current_models=1.
+Rewrite_terms=2, rewrite_bools=21, indexes=1.
+Rules_from_neg_clauses=0, cross_offs=0.
+
+============================== end of statistics =====================
+
+User_CPU=0.00, System_CPU=0.00, Wall_clock=0.
+
+Exiting with 1 model.
+
+Process 10893 exit (max_models) Wed Apr 10 16:42:59 2024
+The process finished Wed Apr 10 16:42:59 2024

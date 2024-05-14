@@ -1,0 +1,22 @@
+- Sur moi même
+	- j'ai eu du mal à me mettre dedans à cause des divers difficulté que j'ai eu lors des TD
+	- plutôt travailleur même si je n'ai pas réussi à finir beaucoup de codes
+	- angoisse beaucoup trop sur le rendu du projet
+	- mieux gérer les dossiers pour mieux s'y retrouver 
+	- dormais pas assez pour être parfaitement concentré en TD pour une matière compliqué
+	- ne demandais pas assez d'aide de la part de l'intervenant 
+- A propose du travaille d'équipe :
+	- j'ai normé tout le projet au début via un plan pour se répartir les tâche et que ceci sois le plus claire possible
+	- j'aime **beaucoup** savoir l'avancé de ce dernier 
+- A propos du projet réalisé 
+	- docker quelle enfer mais j'ai solve le pb
+	- de base je voulais faire du bash mais on à fait du C
+	- 2 idée pour l'interconnection des dockers :
+		- netcat (qui seras conservé)
+		- MQTT qui à été abandonné mais qui aurais sans doute marché
+	- Windows à été un **ENFER** à faire fonctionner 
+	- Linux à bien marché dès le début, les docker étaient créer très vite 
+	- la bataille de chifoumi était intéressante à réaliser 
+	- à peur de ne pas avoir son UE
+
+

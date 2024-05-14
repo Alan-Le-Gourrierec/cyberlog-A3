@@ -1,0 +1,120 @@
+body{
+    background-color: beige;
+}
+ 
+footer {
+    display: flex; /* Utilisation de flexbox pour disposer les éléments horizontalement */
+    justify-content: space-around; /* Pour espacer également les éléments horizontalement */
+}
+
+h2{
+    text-align: left;
+}
+
+footer > div {
+    flex: 1; /* Pour que chaque div occupe un espace égal */
+    margin: 0 10px; /* Espacement entre les divs */
+    text-align: center; /* Centrer le contenu à l'intérieur de chaque div */
+}
+
+.links a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5em;
+}
+
+.header-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10%;
+}
+.p1 {
+    flex: 1;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    padding-left:5px;
+    padding-top: 20px;
+    }
+
+.p2 {
+    flex: 2;
+    margin: 2%;
+}
+
+footer .photos-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 5px;
+    border: 2px solid black; /* Ajoute un cadre noir de 2 pixels autour de chaque image */
+    padding: 5px; /* Espace à l'intérieur du cadre */
+    box-sizing: border-box; /* Garantit que la taille totale de l'image reste la même */
+}
+
+p {
+    text-align: justify;
+}
+
+#campusimg{
+    margin: auto;
+    display: flex;
+    border: 2px solid black;
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+}
+#campusimg img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.styleimg{
+    max-width: 100%;
+    border: 2px solid black; /* Ajoute un cadre noir de 2 pixels autour de chaque image */
+    box-sizing: border-box; /* Garantit que la taille totale de l'image reste la même */
+    margin: 15%;
+    text-align: center;
+}   
+
+.footer-liste{
+    display: flex;
+    color: rgb(110, 4, 4);
+    justify-content: space-between;
+    text-align: left;
+}
+
+.pos-image {
+    display: flex;
+    margin-right: auto;
+    width: 25%;
+    float: left;
+    padding: 0;
+}
+
+footer-item{
+    margin-right: 15%;
+}
+
+#header {
+    border-radius: 10px;
+    position: relative;
+    width: 98dvw;
+    max-height: 19vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1dvh 1dvh 2px rgb(32, 82, 128);
+    margin-bottom: 2dvh;
+}
+#header-txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    color: white;
+    background-color:rgba(245, 245, 245, 0.281);
+    padding-left: 10px;
+}

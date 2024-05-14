@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html class="no-js  page-1 app-LIVESQL" lang="en" >
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>SQL Worksheet</title>
+  <link rel="stylesheet" href="/i/app_ui/css/Core.min.css?v=22.1.3" type="text/css" />
+<link rel="stylesheet" href="/i/app_ui/css/Theme-Standard.min.css?v=22.1.3" type="text/css" />
+
+  <link rel="stylesheet" href="/i/libraries/font-apex/2.2.1/css/font-apex.min.css?v=22.1.3" type="text/css" />
+<link rel="stylesheet" href="/i/themes/theme_42/22.1/css/Core.min.css?v=22.1.3" type="text/css" />
+
+  
+  <link rel="stylesheet" href="/i/themes/theme_42/22.1/css/Vita.min.css?v=22.1.3" type="text/css" />
+
+  <link rel="stylesheet" href="r/livesql/590/files/static/v484/css/livesql.min.css" type="text/css" />
+
+  <link rel="stylesheet" href="r/livesql/590/files/static/v484/css/codeEditor.min.css" type="text/css" />
+<style type="text/css">
+.t-Body-contentInner {
+    flex-grow: 1;
+    flex-basis: 0;
+    overflow: hidden;
+}
+
+.t-Body-contentInner2 {
+    overflow: hidden;
+}
+
+/* Preserve spacing inside of reports */
+.results-div .msg {
+    white-space: pre-wrap;
+}
+
+/* Remove alternating row style */
+.msg .u-Report tr:nth-child(even) td, 
+.msg .u-Report tr:nth-child(even) th[scope=row] {
+    background-color: #FFF;
+}
+
+/* default value of --worksheet-font-size */
+/* if the user preference is custom, this value will be overwritten by a custom style tag */
+:root {
+    --worksheet-font-size: 14px;
+}
+
+/* applying it to the editor */
+.cm-editor {
+    font-size: var(--worksheet-font-size);
+}
+
+/* applying it to the results container */
+#results {
+    font-size: var(--worksheet-font-size);
+}
+
+/* one of these classes can be applied to body based on the user preference */
+.worksheet-font-size-small {
+    --worksheet-font-size: 12px;
+}
+.worksheet-font-size-medium {
+    --worksheet-font-size: 14px;
+}
+.worksheet-font-size-large {
+    --worksheet-font-size: 16px;
+}
+
+/* important to slightly increase these values on mobile
+   on iOS for example the default (medium) should be 16px to avoid zooming when focusing
+ */
+@media screen and (max-width: 640px) {
+    .worksheet-font-size-small {
+        --worksheet-font-size: 14px;
+    }
+    .worksheet-font-size-medium {
+        --worksheet-font-size: 16px;
+    }
+    .worksheet-font-size-large {
+        --worksheet-font-size: 18px;
+    }
+}
+</style>
+
+  <link rel="apple-touch-icon" href="r/livesql/590/files/static/v484/icons/app-icon-192.png" /><link rel="icon" href="r/livesql/590/files/static/v484/icons/app-icon-32.png" />
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" /><meta name="theme-color" content="&#x23;000000" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="&#x3C;span&#x20;class&#x3D;&#x22;u-vh&#x22;&#x3E;Oracle&#x3C;&#x2F;span&#x3E;&#x20;&#x26;APPLICATION_TITLE." />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="manifest" href="&#x2F;apex&#x2F;r&#x2F;livesql&#x2F;livesql&#x2F;manifest.json&#x3F;v&#x3D;22.1.3-143421375799&#x26;lang&#x3D;en" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="BUM28-7GUGJ-B7YY7-XUSPX-EJ96D",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"BUM28-7GUGJ-B7YY7-XUSPX-EJ96D";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="eaaqmydtaqaa6kqce3ycwaaornsuudd7-f-f1cf17742-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"36","ak.cp":"881309","ak.ai":parseInt("562634",10),"ak.ol":"0","ak.cr":19,"ak.ipv":6,"ak.proto":"h2","ak.rid":"149146aa","ak.r":47072,"ak.a2":n,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"2001:660:7304:f::","ak.cport":52152,"ak.gh":"88.221.129.90","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"","ak.t":"1699351679","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==VqU5Sd7BZxa9N+H33u0mx3F04aK9K26MNLPdw4KvYYcM6sLTNRzOeV3BPu56dWHO3yiflQ7t6+aKVRbWpr8WpVOASDA4wrenbSpx8c8BP43pDKQg5vWs9aUFN7QpuwSZYdYyHTB9d3ARLOVPs6/pZhI1C9SB72AAVwduihaPmYdP4knvv3PzYsM5W0LJTKCtJoUXv3o3450lyyEeQz9EpVQOtyubTZXej5nn2LsFBsu884h/U85mqso54FYylXzOk1UTQSZ80SD1vCflGej56UvyTVqvUw1JWSWWJCMbzcyYl4QM+pRzgilrmg0D2qmRk3IgqA0mSrtrj9zF+q3zyTxGaTy3oTtEZm6Za2zynv7lETND1zxaMYotZF7C4o/l6xHZ932AhTQE+/QxHw/N9KzyOaRiLDiNJqMS/NOIee0=","ak.pv":"13","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard  is-darkmode worksheet-font-size-medium  t-DeferredRendering t-PageBody--noContentPadding apex-side-nav apex-icons-fontapex apex-theme-vita"   id="t_PageBody">
+<a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+<form action="wwv_flow.accept?p_context=590:1:16251121017876" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate >
+<input type="hidden" name="p_flow_id" value="590" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="1" id="pFlowStepId" /><input type="hidden" name="p_instance" value="16251121017876" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="290031671189772332779139157950021410659" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="A" id="pReloadOnSubmit" /><input type="hidden" value="590&#x3A;1&#x3A;16251121017876" id="pContext" /><input type="hidden" value="290031671189772332779139157950021410659" id="pSalt" />
+<header class="t-Header" id="t_Header" role="banner">
+  
+  <div class="t-Header-branding">
+    <div class="t-Header-controls">
+      <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+    </div>
+    <div class="t-Header-logo">
+      <a href="f?p=590:1000:16251121017876:::::" class="t-Header-logo-link"><img src="r&#x2F;livesql&#x2F;590&#x2F;files&#x2F;static&#x2F;v484&#x2F;images&#x2F;oracle-logo.svg" alt="" class="apex-logo-img" /><span class="apex-logo-text"><span class="u-vh">Oracle</span> Live SQL</span></a>
+      
+    </div>
+    <div class="t-Header-navBar">
+      <div class="t-Header-navBar--start"></div>
+      <div class="t-Header-navBar--center"><ul class="t-NavigationBar " id="3263937843120997057"><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="javascript:apex.theme42.dialog('f?p=590:44:16251121017876::::P44_PAGE_ID:1\u0026cs=3vdY8oXrq-40FekTn51OP-tdXWkPjXdzkPC8D0jkVlzTDMIOcM-EoN_nJxFpMje1sYnyDCgpx5HdDzgetFTbefQ\u0026p_dialog_cs=Vm54yI8W9ZT9pE4xnqLB4iahyh0eiGjFZ7r-ADFG5Pu6Q0Q6H5jacZg_M28v2qjO41pQRw8meJUIfdqHMnHYYg',{title:'Submit Feedback',h:'auto',w:'720',mxw:'960',modal:true,dialog:null,dlgCls:'t-Dialog-page--standard '+''},'',apex.gPageContext$)" title="" target="">
+    <span class="t-Icon fa&#x20;fa-comment-o" aria-hidden="true" ></span><span class="t-Button-label">Feedback</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="f?p=590:HELP:16251121017876:::::" title="" target="">
+    <span class="t-Icon a-Icon&#x20;icon-help" aria-hidden="true" ></span><span class="t-Button-label">Help</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item has-username">
+  <button class="t-Button t-Button--icon t-Button t-Button--header t-Button--navBar js-menuButton" type="button" id="L7178662666532670" data-menu="menu_L7178662666532670" title="">
+      <span class="t-Icon a-Icon&#x20;icon-user" aria-hidden="true" ></span><span class="t-Button-label">ALAN191100@GMAIL.COM</span><span class="t-Button-badge"></span><span class="a-Icon icon-down-arrow" aria-hidden="true"></span>
+  </button><div class="t-NavigationBar-menu" style="display: none" id="menu_L7178662666532670"><ul><li class="" data-current="false" data-icon=""><a href="javascript:apex.theme42.dialog('f?p=590:8:16251121017876:::RP\u0026p_dialog_cs=YxIbTCPgqpbnJm8WdBnugP9Fnc2Ya_Q0ueCrWwRlXCqZy4m6SuD5YeTUPYWCu_wMXDIE3Kob3ym43nzBEptobw',{title:'Notifications',h:'auto',w:'720',mxw:'960',modal:true,dialog:null,dlgCls:'t-Dialog-page--standard '+''},'',apex.gPageContext$)" title="" target="">Notifications</a></li><li class="" data-current="false" data-icon=""><a href="apex_authentication.logout?p_app_id=590&p_session_id=16251121017876" title="" target="">Sign Out</a></li></ul></div></li></ul></div>
+      <div class="t-Header-navBar--end"><div class="t-Form-fieldContainer t-Form-fieldContainer--hiddenLabel rel-col ls-darkmode-switch apex-item-wrapper apex-item-wrapper--yes-no " id="P0_DARKMODE_CONTAINER"><div class="t-Form-labelContainer t-Form-labelContainer--hiddenLabel col col-null">
+<label for="P0_DARKMODE" id="P0_DARKMODE_LABEL" class="t-Form-label u-VisuallyHidden">Dark Mode</label>
+</div><div class="t-Form-inputContainer col col-null"><div class="t-Form-itemWrapper"><span class="a-Switch"><input type="checkbox"  id="P0_DARKMODE" name="P0_DARKMODE" value="Y" data-on-label="On" data-off-value="N" data-off-label="Off" checked="checked"><span class="a-Switch-toggle"></span></span></div><span id="P0_DARKMODE_error_placeholder" class="a-Form-error" data-template-id="3114753988868898_ET"></span></div></div></div>
+    </div>
+  </div>
+  <div class="t-Header-nav"></div>
+</header>
+<div class="t-Body">
+  <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Main Navigation">
+  <div class="a-TreeView t-TreeNav js-defaultCollapsed js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--classic" id="t_TreeNav" data-id="1_tree" aria-label="Main Navigation">
+    <ul>
+<li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-home" data-shortcut="">
+  <a href="f?p=590:1000:16251121017876:::::" title="" style="display: none" target="">Home</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-home"></span>
+      <span class="a-TreeView-label">Home</span>
+    </div>
+  </div>
+</li><li data-current="true" data-id="" data-disabled="" data-icon="fa&#x20;fa-terminal" data-shortcut="">
+  <a href="f?p=590:1:16251121017876:::::" title="" style="display: none" target="">SQL Worksheet</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row is-selected is-current--top"></div>
+    <div role="none" class="a-TreeView-content is-selected is-current--top">
+      <span class="fa fa-file-o fa&#x20;fa-terminal"></span>
+      <span class="a-TreeView-label">SQL Worksheet</span>
+    </div>
+  </div>
+</li>
+<li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-bars" data-shortcut="">
+  <a href="f?p=590:6:16251121017876:::::" title="" style="display: none" target="">My Session</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-bars"></span>
+      <span class="a-TreeView-label">My Session</span>
+    </div>
+  </div>
+<ul style="display:none"><li data-id="" data-disabled="" data-icon="" data-shortcut=""><a href="f?p=590:25:16251121017876:::::" title="" target="">Previous Sessions</a></li><li data-id="" data-disabled="" data-icon="" data-shortcut=""><a href="f?p=590:21:16251121017876:::::" title="" target="">Previously Viewed</a></li><li data-id="" data-disabled="" data-icon="" data-shortcut=""><a href="f?p=590:22:16251121017876:::::" title="" target="">Utilization</a></li><li data-id="" data-disabled="" data-icon="" data-shortcut=""><a href="f?p=590:23:16251121017876:::::" title="" target="">NLS</a></li></ul></li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-database" data-shortcut="">
+  <a href="f?p=590:71:16251121017876:::::" title="" style="display: none" target="">Schema</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-database"></span>
+      <span class="a-TreeView-label">Schema</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-magic" data-shortcut="">
+  <a href="f?p=590:800:16251121017876:::::" title="" style="display: none" target="">Quick SQL</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-magic"></span>
+      <span class="a-TreeView-label">Quick SQL</span>
+    </div>
+  </div>
+<ul style="display:none"><li data-id="" data-disabled="" data-icon="" data-shortcut=""><a href="f?p=590:805:16251121017876:::::" title="" target="">My Models</a></li></ul></li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-file-text-o" data-shortcut="">
+  <a href="f?p=590:17:16251121017876:::::" title="" style="display: none" target="">My Scripts</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-file-text-o"></span>
+      <span class="a-TreeView-label">My Scripts</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-graduation-cap" data-shortcut="">
+  <a href="f?p=590:12:16251121017876:::::" title="" style="display: none" target="">My Tutorials</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-graduation-cap"></span>
+      <span class="a-TreeView-label">My Tutorials</span>
+    </div>
+  </div>
+</li><li data-current="false" data-id="" data-disabled="" data-icon="fa&#x20;fa-cubes" data-shortcut="">
+  <a href="f?p=590:49:16251121017876:::::" title="" style="display: none" target="">Code Library</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-cubes"></span>
+      <span class="a-TreeView-label">Code Library</span>
+    </div>
+  </div>
+</li>    </ul>
+  </div>
+</div>
+<script>(sessionStorage.getItem("nav.590.preferenceForExpanded") === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) && document.getElementById('t_PageBody').classList.add('js-navExpanded');</script>
+<script>
+    const labels = document.querySelectorAll(".a-TreeView .a-TreeView-label");
+    for (const label of labels) {
+        label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
+    }
+</script>
+  <div class="t-Body-main">
+    <div class="t-Body-title" id="t_Body_title"><nav aria-label="SQL&#x20;Worksheet" id="R38137955754470605"  class="t-BreadcrumbRegion t-BreadcrumbRegion--showBreadcrumb t-BreadcrumbRegion--compactTitle t-BreadcrumbRegion--useRegionTitle">
+  <div class="t-BreadcrumbRegion-top">
+    <div class="t-BreadcrumbRegion-body">
+      <div class="t-BreadcrumbRegion-breadcrumb"><div id="actions"  class=""><div id="actions_menu" class="" style="display:none;"><ul><li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-list-ol"><a href="f?p=590:6:16251121017876:BACKTOONE::::&cs=3iXTg3uns-TnkZemORULml5_Nn7hPf0zeIOcXbLXLWRQBpUWxlWIjn4Ot-fsgnHkI8zYHRGgG0hTQSykiT-WmQw" title="" target="">View Session</a></li>
+<li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-undo"><a href="javascript:apex.theme42.dialog('f?p=590:20:16251121017876:::20::\u0026cs=3qfUv7rzgxnjvIawXXmr_zwD65aMbXXUDpahSmakjU2JRsM_67uFjFTy9opD9JS9wGcBYUs4P-8letnOgnQzjig\u0026p_dialog_cs=zjBAmrMGXxqjswbIufwxcFWfrH-JPgp1XTxYU5HAuLWh1i14NsrNwmAGsWhEpXoaGQPgbHGXCg6-TznBCiKXBg',{title:'Reset Session',h:'auto',w:'720',mxw:'960',modal:true,dialog:null,dlgCls:'t-Dialog-page--standard '+''},'',apex.jQuery('#actions_menu'))" title="" target="">Reset Session</a></li>
+<li data-id="" data-disabled="" data-hide="" data-shortcut="" data-icon="fa&#x20;fa-table-wrench"><a href="javascript:apex.theme42.dialog('f?p=590:76:16251121017876\u0026p_dialog_cs=O0f5YnJ7xldO0l1xZREZnRwCGHb0sDmVS1O23XIrVvozkdZ2iiGx0vf-d-7n385YLkHrWVYsF2Cwe_HujSRQtw',{title:'Preferences',h:'auto',w:'720',mxw:'960',modal:true,dialog:null,dlgCls:'t-Dialog-page--standard '+''},'',apex.jQuery('#actions_menu'))" title="" target="">Maximum Rows Preference</a></li>
+</ul></div></div></div>
+        <div class="t-BreadcrumbRegion-title">
+        <h1 id="R38137955754470605_heading" class="t-BreadcrumbRegion-titleText" data-apex-heading>SQL Worksheet</h1>
+      </div>
+    </div>
+    <div class="t-BreadcrumbRegion-buttons"><button class="t-Button t-Button--icon t-Button--noUI&#x20;t-Button--iconLeft"  onclick="void(0);" type="button" id="B17277945223825675"><span class="t-Icon t-Icon--left fa&#x20;fa-eraser" aria-hidden="true"></span><span class="t-Button-label">Clear</span><span class="t-Icon t-Icon--right fa&#x20;fa-eraser" aria-hidden="true"></span></button><button class="t-Button t-Button--icon t-Button--noUI&#x20;t-Button--iconLeft"  onclick="javascript:apex.theme42.dialog(&#x27;f?p=590:13:16251121017876:::RP:P13_TABLE_NAME\u0026p_dialog_cs=fa937LheoW7Pxct8TsidP8bBf3d1l56OoN1zskrEiXLFAQ058oakjmOIDThdFO0HyfznYldGQ2f0kcMS-9O1Ng&#x27;,{title:&#x27;Table\u002FView Finder&#x27;,h:&#x27;auto&#x27;,w:&#x27;720&#x27;,mxw:&#x27;960&#x27;,modal:true,dialog:null,dlgCls:&#x27;t-Dialog-page--standard &#x27;+&#x27;&#x27;},&#x27;&#x27;,apex.jQuery(&#x27;#B17278342491825676&#x27;))" type="button" id="B17278342491825676"><span class="t-Icon t-Icon--left fa&#x20;fa-flashlight" aria-hidden="true"></span><span class="t-Button-label">Find</span><span class="t-Icon t-Icon--right fa&#x20;fa-flashlight" aria-hidden="true"></span></button><button class="t-Button t-Button--icon js-menuButton&#x20;&#x20;t-Button--iconRight&#x20;t-Button--gapRight" data-menu="actions_menu" onclick="void(0);" type="button" id="B17278775002825676"><span class="t-Icon t-Icon--left fa&#x20;fa-angle-down" aria-hidden="true"></span><span class="t-Button-label">Actions</span><span class="t-Icon t-Icon--right fa&#x20;fa-angle-down" aria-hidden="true"></span></button><button class="t-Button t-Button--icon t-Button--iconLeft&#x20;t-Button--padRight"  onclick="javascript:apex.theme42.dialog(&#x27;f?p=590:28:16251121017876:::RP,28::\u0026cs=3D0SlcTB0-KMBTEdkTpWdd1U_Av1BNiUQczi-dQE5dk5N7nfWUwHeXJqjTXU2dbe7sIJQrM_ccrigg91A3VZu-w\u0026p_dialog_cs=4ZsPXK2a16BGbO4rvSx2_1PtlOYnlIqO_26DRWr2GKlPvAWX95rvoJP-_-L7CjGak-VjTrqhHcRVd7WxDbnV3A&#x27;,{title:&#x27;Save Session&#x27;,h:&#x27;auto&#x27;,w:&#x27;720&#x27;,mxw:&#x27;960&#x27;,modal:true,dialog:null,dlgCls:&#x27;t-Dialog-page--standard &#x27;+&#x27;&#x27;},&#x27;&#x27;,apex.jQuery(&#x27;#save_session&#x27;))" type="button" id="save_session"><span class="t-Icon t-Icon--left fa&#x20;fa-save" aria-hidden="true"></span><span class="t-Button-label">Save</span><span class="t-Icon t-Icon--right fa&#x20;fa-save" aria-hidden="true"></span></button><button class="t-Button t-Button--icon t-Button--iconRight&#x20;t-Button--padLeft t-Button--hot" aria-controls="statement_result" onclick="void(0);" type="button" id="B17279509182825677"><span class="t-Icon t-Icon--left fa&#x20;fa-play-circle" aria-hidden="true"></span><span class="t-Button-label">Run</span><span class="t-Icon t-Icon--right fa&#x20;fa-play-circle" aria-hidden="true"></span></button></div>
+  </div>
+  <div class="t-BreadcrumbRegion-bottom"></div>
+</nav>
+</div>
+    <div class="t-Body-content" id="t_Body_content">
+      <main id="main" class="t-Body-mainContent">
+        <span id="APEX_SUCCESS_MESSAGE" data-template-id="5712536473689076_S" class="apex-page-success"><div class="t-Body-alert">
+  <div class="t-Alert t-Alert--defaultIcons t-Alert--success t-Alert--horizontal t-Alert--page t-Alert--colorBG" id="t_Alert_Success" role="alert">
+    <div class="t-Alert-wrap">
+      <div class="t-Alert-icon">
+        <span class="t-Icon"></span>
+      </div>
+      <div class="t-Alert-content">
+        <div class="t-Alert-header">
+          <h2 class="t-Alert-title">0 database objects have been dropped.  Session history has been removed. NLS settings reset.</h2>
+        </div>
+      </div>
+      <div class="t-Alert-buttons">
+        <button class="t-Button t-Button--noUI t-Button--icon t-Button--closeAlert" type="button" title="Close"><span class="t-Icon icon-close"></span></button>
+      </div>
+    </div>
+  </div>
+</div></span><span id="APEX_ERROR_MESSAGE" data-template-id="5712536473689076_E" class="apex-page-error u-hidden"></span>
+        <div class="t-Body-fullContent"></div>
+        <div class="t-Body-contentInner"><div id="main_splitter" style="height: 600px;" class=""> 
+<div id="editor_panel"  class="resize"> 
+<div id="editor_splitter" style="height: 600px;" class="resize"> 
+<div id="sql_panel" aria-label="SQL Editor" class="resize"><div id="editor" style="height: 100%;"></div><input type="hidden" name="P1_SQL" id="P1_SQL" value="DROP TABLE Membre;
+DROP TABLE Groupe;
+DROP TABLE Ami;
+DROP TABLE Personne;
+
+
+CREATE TABLE Personne(
+	id_personne NUMBER(20),
+ 	nom_personne VARCHAR2(25),
+ 	age NUMBER(3),
+ 	CONSTRAINT pk1 PRIMARY KEY (id_personne));
+ 
+ CREATE TABLE Ami(
+  	id_personne1 NUMBER(20),
+  	id_personne2 NUMBER(20),
+	CONSTRAINT pk2 PRIMARY KEY (id_personne1,id_personne2),
+	CONSTRAINT fk1 FOREIGN KEY (id_personne1) REFERENCES Personne(id_personne),
+  	CONSTRAINT fk2 FOREIGN KEY (id_personne2) REFERENCES Personne(id_personne));
+ 
+CREATE TABLE Groupe(
+  	id_groupe NUMBER(20),
+  	nom_groupe VARCHAR2(25),
+	CONSTRAINT pk3 PRIMARY KEY (id_groupe));
+
+CREATE TABLE Membre (
+	id_groupe NUMBER(20),
+    id_personne NUMBER(20),
+    CONSTRAINT pk4 PRIMARY KEY (id_groupe,id_personne),
+	CONSTRAINT fk3 FOREIGN KEY (id_groupe) REFERENCES Groupe(id_groupe),
+    CONSTRAINT fk4 FOREIGN KEY (id_personne) REFERENCES Personne(id_personne));
+
+INSERT INTO PERSONNE VALUES (1,&#x27;Annie&#x27;,19);
+INSERT INTO PERSONNE VALUES (2,&#x27;Alba&#x27;,20);
+INSERT INTO PERSONNE VALUES (3,&#x27;George&#x27;,21);
+INSERT INTO PERSONNE VALUES (4,&#x27;Samantha&#x27;,20);
+INSERT INTO PERSONNE VALUES (5,&#x27;Baldwine&#x27;,19);
+INSERT INTO PERSONNE VALUES (6,&#x27;Alfred&#x27;,17);
+
+INSERT INTO GROUPE VALUES (1,&#x27;Surf&#x27;);
+INSERT INTO GROUPE VALUES (2,&#x27;Yoga&#x27;);
+INSERT INTO GROUPE VALUES (3,&#x27;Voyage&#x27;);
+INSERT INTO GROUPE VALUES (4,&#x27;Musique&#x27;);
+INSERT INTO GROUPE VALUES (5,&#x27;Dance&#x27;);
+INSERT INTO GROUPE VALUES (6,&#x27;Jazz&#x27;);
+
+INSERT INTO AMI VALUES (1,2);
+INSERT INTO AMI VALUES (3,4);
+INSERT INTO AMI VALUES (5,4);
+INSERT INTO AMI VALUES (5,6);
+
+INSERT INTO MEMBRE VALUES (1,1);
+INSERT INTO MEMBRE VALUES (2,2);
+INSERT INTO MEMBRE VALUES (3,2);
+INSERT INTO MEMBRE VALUES (6,5);
+INSERT INTO MEMBRE VALUES (6,6);
+INSERT INTO MEMBRE VALUES (5,4);
+
+UPDATE PERSONNE 
+SET age = 25
+WHERE nom_personne = &#x27;George&#x27;;
+
+UPDATE PERSONNE
+SET age = age + 1;
+
+DELETE MEMBRE 
+WHERE id_personne = 3 OR id_personne = 4;
+
+DELETE AMI
+WHERE id_personne1 = 3 OR id_personne2 = 3 OR id_personne1 = 4 OR id_personne2 = 4;
+
+DELETE PERSONNE
+WHERE nom_personne = &#x27;George&#x27; OR nom_personne = &#x27;Samantha&#x27;;
+
+SELECT * 
+FROM PERSONNE;
+
+
+"></div><div id="statement_result"  class="results-container"><div class="results-div" id="results">
+<span class="results-null-msg">SQL Statement Output</span>
+</div>
+</div>
+</div>
+</div>
+</div><div id="R1076522878789928254"  class=""><input type="hidden" name="P1_SAMPLE_ID" id="P1_SAMPLE_ID" value=""><input type="hidden" data-for="P1_SAMPLE_ID" value="Z2FnbvqwJgLpBfsUSmT_x5wVMi9J4yyADB0lIQBuLMoFzVLpOB5F6WF0vKqes6R8vkTHR7G74DQvbZC0eisWZQ"><input type="hidden" name="P1_MIN_RESULT_SEQ" id="P1_MIN_RESULT_SEQ" value="2561937122"><input type="hidden" data-for="P1_MIN_RESULT_SEQ" value="0tmcRmz6jzHl2t6uh9A9zDYoONFrMEBC8X_1B7X4QJWyXHAmxnK8Qit99C8q3yG0NfsyvqlswirZtmvY6pvWdQ"><input type="hidden" name="P1_SHOW_LEARN_SIDEBAR" id="P1_SHOW_LEARN_SIDEBAR" value="N"><input type="hidden" data-for="P1_SHOW_LEARN_SIDEBAR" value="M1qk4HKtfJCmnlgnv2XrdJ4igFaU_B5sEX7bYvitN7DuGdEehqsEcRyUUOqkNZaHWD9FMrXMLiU3UqSbjB2o4A"><input type="hidden" name="P1_LEARN_CONTEXT" id="P1_LEARN_CONTEXT" value=""><input type="hidden" data-for="P1_LEARN_CONTEXT" value="ThEvP4XM2Pu81zGhUMJC9PDwfYCZ39flmoHB2EHlAwn04XwqXfDCtTRAidi3JFfHnBNUyzaQuOhZUVBYo28CLg"><input type="hidden" name="P1_SQL2" id="P1_SQL2" value=""><input type="hidden" data-for="P1_SQL2" value="zugykUUw-MlMxMSR_gslq_D8Ei2rHwKKGWklD2xgaXA7qWeth5Fzp8YCq6udVZayrDynoJpDtYaSEO3KlaLUKw"><input type="hidden" name="P1_NOTIF_ID" id="P1_NOTIF_ID" value=""><input type="hidden" data-for="P1_NOTIF_ID" value="kVA0kPzSi0m3dyc2rsY4UhnVF8fu8CAXtRLZEq59PcFI8RE-Kq7FN_8nTP7gfxo6sh6oJhddGT3fak9sTypJBg"><input type="hidden" name="P1_STATEMENT_ID" id="P1_STATEMENT_ID" value=""><input type="hidden" data-for="P1_STATEMENT_ID" value="Lxufe49Hk9GP60KHjrFUPIZEDQIWJEpQ2csDcdFYuTIjWacYg6_PNL3ryY216LCupMaOT7FM5I6qVCIxyk8dSA"><input type="hidden" name="P1_PREF_LINE_NUMBERS" id="P1_PREF_LINE_NUMBERS" value="Y"><input type="hidden" data-for="P1_PREF_LINE_NUMBERS" value="Gb7iRN-R0jbfbUtlz5BqBTBOKe3Z2ufqcYbYHGjuJcI6v9ZPBFUkpBi1RC6HPDCYOICLcS4ja7Hbc8kTfT_leQ"><input type="hidden" name="P1_PREF_CLOSE_BRACKETS" id="P1_PREF_CLOSE_BRACKETS" value="Y"><input type="hidden" data-for="P1_PREF_CLOSE_BRACKETS" value="GfDfxUNf9MmDioRrVRa1IR4DHWJrl_gi6VIXnXznoim_wHV6BnIbUXzQ4it_PxeOf185BKQLSUbI6nJdBgzbOQ"><input type="hidden" name="P1_PREF_FONT_SIZE_PX" id="P1_PREF_FONT_SIZE_PX" value=""><input type="hidden" data-for="P1_PREF_FONT_SIZE_PX" value="j1FdSRGyhURCaktmWuLfZRNcTI9hmHe60kXK0x4gUaOxXe_iWyIcCWfJDtrWqT-NbSr7ZqFximXEqrVsMmL-ow"></div><div id="R1078776566488977187"  class=""><div class="script-info">
+<strong>&nbsp;</strong> 
+<div class="script-actions">
+</div>
+</div>
+</div></div>
+      </main>
+      <footer class="t-Footer" id="t_Footer" role="contentinfo">
+        <div class="t-Footer-body">
+          <div class="t-Footer-content"><div id="R1012157221149035436"  class=""><span class="footer-sql"> 2023 Oracle</span> &middot; Live SQL 23.4.2, running Oracle Database 19c EE Extreme Perf - 19.17.0.0.0 &middot; <a href="https://docs.oracle.com/en/database/oracle/oracle-database/" target="_blank">Database Documentation</a>  &middot; <a href="https://asktom.oracle.com/pls/apex/f?p=100:::::::" target="_blank">Ask Tom</a> &middot; <a href="https://devgym.oracle.com" target="_blank">Dev Gym</a><br /><span class="u-BuiltWithAPEX">Built with <span class="fa fa-heart"><span class="u-VisuallyHidden">love</span></span> using <a href="https://apex.oracle.com/" target="_blank">Oracle APEX</a> &middot; <a href="http://www.oracle.com/us/legal/privacy/overview/index.html" target="_blank">Privacy</a>  &middot; <a href="http://www.oracle.com/us/legal/terms/index.html" target="_blank">Terms of Use</a> </span></div><h1 class="u-VisuallyHidden">SQL Worksheet</h1>
+</div>
+          <div class="t-Footer-apex">
+            <div class="t-Footer-version">23.4.2</div>
+            <div class="t-Footer-customize"></div>
+            
+          </div>
+        </div>
+        <div class="t-Footer-top">
+          <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton"><span class="a-Icon icon-up-chevron"></span></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+<div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+<input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="UDFfU0FNUExFX0lEOlAxX01JTl9SRVNVTFRfU0VROlAxX1NIT1dfTEVBUk5fU0lE.,RUJBUjpQMV9MRUFSTl9DT05URVhUOlAxX1NRTDI6UDFfTk9USUZfSUQ6UDFfU1RB.,VEVNRU5UX0lEOlAxX1BSRUZfTElORV9OVU1CRVJTOlAxX1BSRUZfQ0xPU0VfQlJB.,Q0tFVFM6UDFfUFJFRl9GT05UX1NJWkVfUFg&#x2F;1gbs_P-gLahrpDrF9uextFofTy4x4LkEJPenEyL-yaLhvKgVgJeTH5O08PgrNEUQrdj-kF3Mpf5zaajhfKVlVA" /></form>
+
+
+<script>
+var apex_img_dir = "\u002Fi\u002F";
+var apex = {env: {APP_USER: "ALAN191100@GMAIL.COM",APP_ID: "590",APP_PAGE_ID: "1",APP_SESSION: "16251121017876",APP_FILES: "r\u002Flivesql\u002F590\u002Ffiles\u002Fstatic\u002Fv484\u002F",WORKSPACE_FILES: "r\u002Flivesql\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "22.1.3",APEX_BASE_VERSION: "22.1"},
+libVersions:{ckeditor5:"32.0.0",cropperJs:"1.5.12",domPurify:"2.3.1",hammer:"2.0.8",jquery:"3.6.0",jqueryUi:"1.13.1",maplibre:"1.15.2",markedJs:"4.0.12",prismJs:"1.26.0",oraclejet:"12.0.0",monacoEditor:"0.32.1",lessJs:"4.1.1"}};
+</script>
+<script src="/i/libraries/apex/minified/desktop_all.min.js?v=22.1.3"></script>
+<script src="wwv_flow.js_messages?p_app_id=590&p_lang=en&p_version=22.1.3-143421375799"></script>
+
+<script type="text/javascript">
+apex.da.initDaEventList = function(){
+apex.da.gEventList = [
+{"triggeringElementType":"BUTTON","triggeringButtonId":"B17279509182825677","bindType":"bind","bindEventType":"click","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ apex.livesql.run();
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElementType":"ITEM","triggeringElement":"P0_DARKMODE","bindType":"bind","bindEventType":"change","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ $( "body" )
+    .toggleClass( "is-darkmode", apex.items.P0_DARKMODE.value == 'Y' )
+    .trigger( "theme-change" );
+},"action":"NATIVE_JAVASCRIPT_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"REEgVFlQRX5-NDIzNTg3NTQ4MTExNTEwOQ\u002FUUjRKkvAoedVGcIm53f2P6BgSguPru_bU7dIm5hL9BaVZ8Wcfqi9DK37QaAmN7UyLirEOVPSrodfTsVzPEon5A","attribute01":"#P0_DARKMODE","attribute04":"N","action":"NATIVE_EXECUTE_PLSQL_CODE"}]},
+{"triggeringElementType":"BUTTON","triggeringButtonId":"B17277945223825675","bindType":"bind","bindEventType":"click","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ CodeEditor[ "editor" ].setValue( "" );
+CodeEditor[ "editor" ].focus();
+
+$("#results .msg").remove();
+$("#results").html('<span class="results-null-msg">SQL Statement Output</span>');
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"triggeringElementType":"JQUERY_SELECTOR","triggeringElement":".dismiss-notification-button","bindType":"live","bindEventType":"click","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ var alert_id = $(this.triggeringElement).data("notification-id");
+$s('P1_NOTIF_ID',alert_id);
+},"action":"NATIVE_JAVASCRIPT_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"waitForResult":true,javascriptFunction:apex.da.executePlSqlCode,"ajaxIdentifier":"REEgVFlQRX5-MTcyOTk1MjgyOTc4MjU3MDA\u002FsVSsT05LiW2_2pGg29wtI7DRyeqmsDB4uWVnmKxez6SMpskUDGlptFmOVL_zW_ztTkgb76vC6v8yEAYvFTynXA","attribute01":"#P1_NOTIF_ID","attribute02":"#P1_NOTIF_ID","attribute04":"N","action":"NATIVE_EXECUTE_PLSQL_CODE"},{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,"affectedElementsType":"REGION","affectedRegionId":"R3306796426393505472",javascriptFunction:apex.da.refresh,"action":"NATIVE_REFRESH"}]}];
+}
+</script>
+
+<script src="/i/libraries/apex/minified/widget.stickyWidget.min.js?v=22.1.3"></script>
+<script src="/i/themes/theme_42/22.1/js/theme42.min.js?v=22.1.3"></script>
+
+
+<script src="r/livesql/590/files/static/v484/js/script.min.js"></script>
+<script src="r/livesql/590/files/static/v484/table2CSV.js"></script>
+<script src="/i/libraries/apex/minified/widget.apexTabs.min.js?v=22.1.3"></script>
+
+<script src="/i/libraries/apex/widget.splitter.js?v=22.1.3"></script>
+<script src="r/livesql/590/files/static/v484/pretty-xml/xmlRenderer.min.js"></script>
+<script src="r/livesql/590/files/static/v484/pretty-xml/xmlPrettyPrint.min.js"></script>
+<script src="r/livesql/590/files/static/v484/pretty-xml/jsonPrettyPrint.min.js"></script>
+<script src="r/livesql/590/files/static/v484/editor.bundle.min.js"></script>
+<script type="text/javascript">
+function checkJSON(str){
+  try {
+    var json = JSON.parse(str);
+    if (json && typeof json === "object") {
+      return json;
+    }
+  }
+  catch (e) { }
+  return false;
+};
+
+function formatXML() {
+    $('.format-xml').each(function(){
+    var parser = new DOMParser();
+    var xmlDocument = parser.parseFromString($(this).text(),"text/xml");
+    xmlPP.print(xmlDocument, $(this)[0]);
+    });
+};
+
+function formatJSON() {
+  $('.u-Report td').each(function(){
+    cell$ = $(this);
+    var cell_text = $(this).text();
+    if (checkJSON(cell_text)) {
+      cell$.addClass("format-xml").text("");
+      var jp = JSON.parse(cell_text);
+      jPP.printJson(cell$[0],null,jp);
+      //  cell$.html( cell_text );x
+    }
+  });
+}
+
+function updateEditorItems() {
+    // gets highlighted statement and sets to P1_SQL2 value
+    const editor = CodeEditor[ "editor" ];
+    apex.items.P1_SQL.value  = editor.getValue();
+    apex.items.P1_SQL2.value = editor.getSelection();
+}
+
+(function() {
+    // be reused for the ctrl+enter command listed in "execute on page load."
+    var result = 1;
+    apex.livesql = {
+        run: function() {
+            updateEditorItems();
+            apex.server.process( "run_statement", {
+                pageItems: [ "P1_SQL", "P1_SQL2" ]
+            }, {
+                dataType: "text",
+                loadingIndicatorPosition: "page",
+                success: function( pData ) {
+                    var renderedData$ = $(pData);
+                    renderedData$.find("table").each(function() {
+                        var table$ = $(this);
+                        table$.before("<h2 class='visuallyhidden'>Result Set " + result + "</h2>");
+                        table$.attr("summary", "Results from query " + result);
+                        result++;
+                    });
+                    $( "#statement_result" ).empty().append(renderedData$);
+                    // show buttons as soon as we have executed one statement
+                    // $( "#reset_session,#save_session" ).show();
+                    $("#save_session").removeClass("apex_disabled");
+                    $("#save_session").attr("disabled", false);
+                    formatXML();
+                    formatJSON();
+                    createCSVDownloadLink('.results-div table.u-Report');
+                }
+            });
+        }
+    };
+})();
+</script>  
+
+
+<script src="/i/libraries/apex/minified/widget.treeView.min.js?v=22.1.3"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="/i/libraries/oraclejet/12.0.0/js/libs/require/require.js?v=22.1.3"></script>
+<script src="/i/libraries/apex/minified/requirejs.jetConfig.min.js?v=22.1.3"></script>
+<script src="/i/libraries/apex/minified/jetCommonBundle.min.js?v=22.1.3"></script>
+<script src="r/livesql/590/files/static/v484/js/codeEditor.min.js"></script>
+<script type="text/javascript">
+apex.session.initTimeouts(300,{"idle_time_ms":3600000,"life_time_ms":25928000,"max_idle_time_ms":3600000},'f?p=590:1000::::93::\u0026success_msg=MCBkYXRhYmFzZSBvYmplY3RzIGhhdmUgYmVlbiBkcm9wcGVkLiAgU2Vzc2lvbiBo.,aXN0b3J5IGhhcyBiZWVuIHJlbW92ZWQuIE5MUyBzZXR0aW5ncyByZXNldC4\u00252FUxaRMyldUa12rkonrsoollA5-NbYJHjWNMIpJRzRGN1WXBmVWMA-abo4Awh3oLci0yRgw0-hzMVKJsUINOLSHw\u0026cs=3UhYRcx0qBFrPfJ2QEq-fRobErxCUfQTqGvkVsTpW0hsF-deZ5zTpP0mQzL_ZaUQMOYMZVSeCqRHSRLJiJue1yw','f?p=590:1000::::93::\u0026success_msg=MCBkYXRhYmFzZSBvYmplY3RzIGhhdmUgYmVlbiBkcm9wcGVkLiAgU2Vzc2lvbiBo.,aXN0b3J5IGhhcyBiZWVuIHJlbW92ZWQuIE5MUyBzZXR0aW5ncyByZXNldC4\u00252FUxaRMyldUa12rkonrsoollA5-NbYJHjWNMIpJRzRGN1WXBmVWMA-abo4Awh3oLci0yRgw0-hzMVKJsUINOLSHw\u0026cs=3UhYRcx0qBFrPfJ2QEq-fRobErxCUfQTqGvkVsTpW0hsF-deZ5zTpP0mQzL_ZaUQMOYMZVSeCqRHSRLJiJue1yw');
+apex.jQuery( function() {
+apex.page.init( this, function() {
+try {
+(function(){apex.widget.yesNo("P0_DARKMODE","SWITCH_CB");})();
+(function(){apex.jQuery('body').addClass('t-PageBody--leftNav');})();
+(function(){var e = apex.jQuery("#actions_menu", apex.gPageContext$);
+if (e.hasClass("js-addActions")) {
+  apex.actions.addFromMarkup( e );
+}
+e.menu({ iconType: 'fa', callout: e.hasClass("js-menu-callout")});})();
+} catch(e) {apex.debug.error(e)};
+apex.item.waitForDelayLoadItems().done(function() {
+try {
+(function(){apex.da.initDaEventList();
+apex.da.init();})();
+apex.theme42.initializePage.noSideCol();
+/**
+ * The following page structure is assumed for the resizing and splitters to work:
+ * 
+ *  div.t-Body-contentInner             - as output by APEX, +flex-basis: 0, +overflow: hidden
+ *      div.t-Body-contentInner2        - all content will be wrapped in this div, which has an absolute size, based on .t-Body-contentInner
+ *          div#main_splitter.resize
+ *              div#editor_panel.resize
+ *                  div#editor_splitter
+ *                      div#sql_panel
+ *                      div#statement_result
+ *              div#tutorial_panel
+ */
+
+// the artificially created .t-Body-contentInner2 will be a container will absolute sizing
+// based on the flex size of .t-Body-contentInner
+$(".t-Body-contentInner").children().wrapAll("<div class='t-Body-contentInner2'></div>");
+
+const
+    bodyContainerInner$ = $(".t-Body-contentInner"),
+    bodyContainerInner2$ = $(".t-Body-contentInner2"),
+    editor$ = $("#editor");
+
+// when .t-Body-contentInner changes size, change .t-Body-contentInner2 to match
+const resizeObserver = new ResizeObserver(apex.util.debounce(() => {
+    const height = bodyContainerInner$.height(),
+        width = bodyContainerInner$.width();
+    bodyContainerInner2$
+        .height(height)
+        .width(width);
+    $("#main_splitter").height(height);
+    $("#editor_splitter").height(height);
+    $("#main_splitter").trigger("resize");
+    $("#editor_splitter").trigger("resize");
+}, 200));
+
+resizeObserver.observe(bodyContainerInner$[0]);
+
+$("#editor_splitter").on("resize", function (e) {
+    e.stopPropagation();
+});
+
+$("#editor_panel").on("resize", function (e) {
+    $("#editor_splitter").trigger("resize");
+});
+
+$('#results').scrollTop($('#results')[0].scrollHeight);
+
+const mainSplitterChildCount = $("#main_splitter").children().length;
+
+if (mainSplitterChildCount === 1) {
+    // remove main splitter to keep things simple
+    $("#main_splitter").contents().unwrap();
+} else if (mainSplitterChildCount === 2) {
+    $("#main_splitter").splitter({
+        orientation: "horizontal",
+        positionedFrom: "end",
+        title: "Resize Tutorial",
+        position: 600,
+        change: function () {
+        }
+    });
+} else {
+    throw new Error("main_splitter has an unexpected child count");
+}
+
+$("#editor_splitter").splitter({
+    orientation: "vertical",
+    title: "Resize Code Editor",
+    position: 300,
+    collapsed: false,
+    change: function () {
+    }
+});
+
+$("#tutorial_panel ol li a").click(function (e) {
+    var href = $(e.target).attr("href");
+    $("#tutorial_panel").animate({
+        scrollTop: $(href).offset().top - apex.theme.defaultStickyTop() - 10
+    })
+    e.preventDefault();
+    return false;
+});
+
+
+$(".SQLSTATEMENT").each(function (index) {
+    var button$ = $('<button class="t-Button t-Button--small" type="button"><span class="t-Icon fa fa-clipboard "></span> Insert into Editor <span class="u-VisuallyHidden">Code Block ' + (index + 1) + '</span></button>');
+    $(this).after(button$);
+    var text = $(this).text();
+    button$.click(function () {
+        const editor = CodeEditor[ "editor" ];
+        editor.setValue( text );
+        editor.focus();
+        editor.setCursorToEnd();
+    });
+});
+
+/*
+(function() {
+    var tabAfterAce = function( next ) {
+        var tabbables$ = $(":tabbable");
+        var runningPrevious$ = $([]);
+        var previous$ = tabbables$.last();
+        var next$ = tabbables$.first();
+        var encounteredEl = false;
+        tabbables$.each(function() {
+            var tabbable$ = $(this);
+            if (encounteredEl) {
+                next$ = tabbable$;
+                return false;
+            }
+            encounteredEl = $(this).hasClass("ace_text-input");
+            if (encounteredEl) {
+                previous$ = runningPrevious$;
+            }
+            runningPrevious$ = tabbable$;
+        });
+        if ( next ) {
+            next$.focus();
+        } else {
+            previous$.focus();
+        }
+    };
+
+    sqlEditor.commands.addCommand({
+        name: "escape tab to next",
+        bindKey: {win: "Alt-F6", mac: "Alt-F6"},
+        exec: function(editor) {
+            tabAfterAce ( true );
+        }
+    });
+    sqlEditor.commands.addCommand({
+        name: "escape tab to previous",
+        bindKey: {win: "Alt-Shift-F6", mac: "Alt-Shift-F6"},
+        exec: function(editor) {
+            tabAfterAce ( false );
+        }
+    });
+})();
+*/
+
+$("button.a-Splitter-thumb").attr("aria-label", "Resize Splitter");
+
+// Configure the editor
+livesql.initWorksheetEditor();
+} finally {
+apex.event.trigger(apex.gPageContext$,'apexreadyend');
+};
+});
+});
+});apex.pwa.registerServiceWorker('\u002Fapex\u002Fr\u002Flivesql\u002Flivesql\u002Fsw.js?v=22.1.3-143421375799\u0026lang=en');
+</script>
+
+</body>
+</html>

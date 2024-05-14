@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <header>
+        <h1 id="titre">Generation De Rapport</h1>
+    </header>
+    <body>
+        <div>
+            <h2>Période :</h2>
+            <div class="container periode">
+                <div>
+                    <label for="dateInput">début :</label>
+                    <input type="date" id="dateInput" v-model="selectedDate">
+                </div>
+                <div>
+                    <label for="dateInput">fin :</label>
+                    <input type="date" id="dateInput" v-model="selectedDate">
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Capteur :</h2>
+            <div class="test">
+                <div class="container capteur">
+                    <div>
+                        <div>
+                            <input type="checkbox" id="capteur">
+                            <label for="capteur">humidité</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="capteur">
+                            <label for="capteur">lumiosité</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="checkbox" id="capteur">
+                            <label for="capteur">temperature</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="capteur">
+                            <label for="capteur">fumée</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="checkbox" id="capteur">
+                            <label for="capteur">pression</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="capteur">
+                            <label for="capteur">mouvement</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Zone Concernée</h2>
+            <div class="test">
+                <div class="container">
+                    <div>
+                        <label for="etageInput">Etages : </label>
+                        <input type="text" id="etageInput">
+                    </div>
+                    <div>
+                        <label for="moduleInput">Modules :</label>
+                        <input type="text" id="moduleInput">
+                    </div>
+                </div>
+                <div class="cadre">
+                    <div class="container">
+                        <button class="cadriage">1</button>
+                        <button class="cadriage">2</button>
+                        <button class="cadriage">3</button>
+                        <button class="cadriage">4</button>
+                        <button class="cadriage">5</button>
+                        <button class="cadriage">6</button>
+                        <button class="cadriage">7</button>
+                        <button class="cadriage">8</button>
+                    </div> 
+                    <div class="container">
+                        <button class="cadriage">9</button>
+                        <button class="cadriage">10</button>
+                        <button class="cadriage">11</button>
+                        <button class="cadriage">12</button>
+                        <button class="cadriage">13</button>
+                        <button class="cadriage">14</button>
+                        <button class="cadriage">15</button>
+                        <button class="cadriage">16</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="container">
+            <button class="generer">
+                Generer
+            </button>
+        </div>
+    </footer>
+</html>
+
+
+<style scoped>
+#titre {
+    text-align: center;
+}
+
+.test{
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    background: linear-gradient(to bottom right, #021e5b, #790303); 
+    padding: 0; 
+    margin: 0; 
+    min-height: 100vh; 
+    color: white;
+}
+
+h2 {
+    margin: 5px;
+}
+
+.cadriage {
+    margin: 8px 2px;
+    width: 30px;
+    height: 50px;
+}
+.cadre {
+    border: 1px solid rgb(255, 255, 255);
+
+}
+
+.generer {
+    background-color: #ffffff; 
+    border: none; 
+    color: rgb(0, 0, 0); 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    margin: 20px 2px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+
+.container{
+    display: flex;
+}
+
+#dateInput {
+    border-radius: 5px;
+}
+
+.periode {
+    display: grid;
+    justify-content: flex-start;
+    margin: 10px;
+    margin-right: 70%;
+}
+
+.capteur{
+    justify-content: space-between;
+    margin: 10px;
+    margin-right: 60%;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    border-radius: 5px;
+}
+
+footer >[type="button"] {
+    justify-content: center;
+}
+</style>

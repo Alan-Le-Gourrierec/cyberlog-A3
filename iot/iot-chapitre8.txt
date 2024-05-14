@@ -1,0 +1,1 @@
+je souhaite réaliser ce TP plus tard, le problème avec l'aéatoire est la seed et elle est basé sur le os.time(). Il y à donc un problème au niveau de l'aléatoire qui n'en est donc pas un. Je vais essayer d'exploiter plusieurs pistes pour créer du "vrai" aléatoire.

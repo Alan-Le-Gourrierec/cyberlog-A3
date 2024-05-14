@@ -1,0 +1,317 @@
+\documentclass[french,12pt,a4paper]{report}
+
+\usepackage{graphicx} %pour les images
+\usepackage[T1]{fontenc} % je sais plus mais c'est cool
+\usepackage{babel} %pour la langue
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor, soul}
+
+%%%%%%%%%%%%%code box
+
+\definecolor{darkWhite}{rgb}{0.94,0.94,0.94}
+\definecolor{darkRed}{rgb}{0.78,0.25,0.21}
+\definecolor{darkBlue}{rgb}{0.39,0.2,,0.78}
+
+\lstdefinestyle{python}{
+  language=python,
+  aboveskip=3mm,
+  belowskip=-2mm,
+  backgroundcolor=\color{darkWhite},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  commentstyle=\color{darkRed},
+  deletekeywords={...},
+  escapeinside={\%*}{*)},
+  extendedchars=true,
+  framexleftmargin=16pt,
+  framextopmargin=3pt,
+  framexbottommargin=6pt,
+  frame=tb,
+  keepspaces=true,
+  keywordstyle=\color{blue},
+  numbers=left,
+  numbersep=10pt,
+  numberstyle=\tiny\color{darkBlue},
+  rulecolor=\color{black},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stepnumber=1,
+  stringstyle=\color{darkBlue},
+  tabsize=4,
+}
+%%%%%%%%%%%%%
+
+%summary
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+%margin
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=20mm,
+right=20mm,
+}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{1.5pt}
+\setlength{\headheight}{23pt}
+\fancyhead[RO]{\includegraphics[scale=0.25]{../logo/Logo_ensibs.png}}
+
+%footer
+\fancyfoot{}
+\renewcommand{\footrulewidth}{1.5pt}
+\fancyfoot[L]{\leftmark}
+\fancyfoot[R]{\textbf{page \thepage}}
+
+%definition style pour plain page (comme chapter pages)
+\fancypagestyle{plain}{
+\renewcommand{\headrulewidth}{1.5pt}
+\setlength{\headheight}{23pt}
+%\fancyhead[L]{\includegraphics[scale=0.25]{../logo/Logo_UBS.png}}
+\fancyhead[RO]{\includegraphics[scale=0.25]{../logo/Logo_ensibs.png}}
+\fancyfoot{}
+\renewcommand{\footrulewidth}{1.5pt}
+\fancyfoot[L]{\leftmark}
+\fancyfoot[R]{\textbf{page \thepage}}
+}
+  
+%start documment 
+\begin{document}
+\begin{titlepage}
+
+%logo
+\begin{center}
+\includegraphics[scale=0.7]{../logo/logo_ensibs.png} 
+\end{center}
+\vspace{3 cm}
+
+%page de garde
+\begin{center}
+%titre
+\Huge{\textbf{Ultra mastermind}} \\
+\large
+%noms
+Le Gourrierec Alan \\
+\today
+
+%informations complémentaire
+\end{center}
+\vspace{4 cm}
+\rule{1\linewidth}{1pt} \\ \\
+\large{
+\textbf{Unité d'enseignement : }  Algorithmique et programmation impérative \\ \\
+\textbf{Enseignant : }Marteau P.-F.   \\ \\
+\textbf{Établissement :} ENSIBS (Vannes) \\ \\
+}
+\rule{1\linewidth}{1pt}
+\end{titlepage}
+
+\normalsize
+
+\tableofcontents
+
+\newpage
+
+\chapter{Spécifications}
+
+Pour la réalisation de ce projet, j'ai utilisé python et plus précisément la branche impérative de ce langage, car je suis plus familier avec cette dernière.\\
+
+
+Je suis bien plus familier avec cette méthode de programmation. Le code n'est pas forcément le plus clair, c'est donc pour ca que ce dernier a été commenté et que les variables possède un nom, d'après moi, auto-porteur afin de comprendre leurs utilité. \\
+
+
+Pour réaliser ce projet, j'ai utilisé la bibliothèque random de python et pour effectuer les diverses évaluations, j'ai utilisé les bibliothèques time, math et mathplotlib.
+
+
+\chapter{Création des diverses fonctions}
+
+Pour réaliser ce projet, j'ai dû réaliser diverses fonctions et leurs tests unitaires, je vais donc vous présenter les plus importantes.
+
+
+\section{Proposition et Population}
+
+Ces deux fonctions sont très proches et servent plus ou moins à la même chose, c'est-à-dire créer une proposition pour résoudre le problème pour proposition (elle sert aussi à générer le code secret.).
+
+\begin{lstlisting}[style=python]
+def Proposition(size):
+    return [random.randint(0, 255) for _ in range(size)]
+\end{lstlisting}
+\vspace{0.2cm}
+
+Pour population, ceci est plus ou moins la même chose, mais il va créer une liste de taille "taille$\_$pop" qui est une variable définie à l'initialisation du programme (libre à vous de la modifier).
+\begin{lstlisting}[style=python]
+def Population(taille_pop, size):
+return [Proposition(size) for _ in range(taille_pop)]
+\end{lstlisting}
+\vspace{0.2 cm}
+
+\section{Fitnesse et FitnessPop}
+\label{fitness}
+Comme précédemment, ces deux fonctions sont plus ou moins les mêmes. La fonction fitness permet de déterminer, en comparant notre code secret avec la proposition, le nombre de lettres à la bonne position et le nombre de lettres à la mauvaise position.
+\begin{lstlisting}[style = python]
+def Fitness(mot_de_pass, proposition):
+    GP = BP = 0  # GP est good_position et BP est bad_position
+    for i in range(min(len(mot_de_pass), len(proposition))):
+        if mot_de_pass[i] == proposition[i]:
+            GP += 1
+        elif proposition[i] in mot_de_pass:
+            BP += 1
+    return GP, BP
+\end{lstlisting}
+\vspace{0.2cm}
+Quant à FitnessPop, sont objectif est de renvoyer une liste contenant la fitness de toutes les propositions de notre population dans le but d'après ne conserver que les meilleurs individus.
+\begin{lstlisting}[style = python]
+def FitnessPop(mot_de_pass, population):
+return [Fitness(mot_de_pass, proposition) for proposition in population]
+\end{lstlisting}
+
+\section{Eugenisme}
+\label{eugenisme}
+Cette partie est une fonction nécessaire pour les algorithmes génétique. Elle permet de sélectionner les meilleurs éléments de notre population et de supprimer les plus mauvais. Nous appliquons pour ceci, un taux de conservation de cette population afin de conserver un certain pourcentage de cette dernière (il est de 60$\%$ dans mes tests).
+
+\begin{lstlisting}[style = python]
+def Eugenisme(population, evaluations, taux_conservation):
+    taille_conserver = int(len(population) * taux_conservation)
+    trie = [i for _, i in sorted(zip(evaluations, population), key=lambda couple: couple[0], reverse=True)]
+    return trie[:taille_conserver]
+\end{lstlisting}
+\vspace{0.2cm}
+
+\section{Reproduction et Mutation}
+\label{mutation}
+Enfin, il ne nous reste plus qu'à effectuer les reproductions au sein de notre population. Pour ce faire, nous prenons une valeur aléatoire entre 0 et la taille de notre code secret pour savoir ou commence et ou fini la transmission des chromosomes du parentA au parentB. Nous obtenons ceci :
+\begin{lstlisting}[style = python]
+def Reproduction(parents, size):
+cut_point = random.randint(0, size)
+return parents[0][:cut_point] + parents[1][cut_point:]
+\end{lstlisting}
+\vspace{0.2cm}
+Il faut ensuite générer des mutations, car si ceci n'est pas fait, nous resterons sur les mêmes solutions du début à la fin et ne pourrons pas trouver la solution. Pour ce faire, nous allons utiliser un taux de mutation, c'est-à-dire, une probabilité, pour chaque enfant, de voir un de ses chromosomes modifier.
+
+
+\begin{lstlisting}[style = python]
+def Mutation(enfant, taux_mutation):
+    for i in range(len(enfant)):
+        if random.random() < taux_mutation:
+            enfant[i] = random.randint(0, 255)
+    return enfant
+\end{lstlisting}
+
+\chapter{Coordination des nos fonctions}
+J'ai donc réalisé une dernière fonction nommé génétique, qui réutilise les précédentes dans le but de les faire fonctionner ensemble (c'est pour avoir un main quasiment vide). Cette dernière ressemble à ceci :
+\begin{lstlisting}[style = python]
+def Genetique(taille_pop, taux_mutation, taux_conservation, size):
+t = time.time()
+generation = 0
+mot_de_pass = Proposition(size)
+#print(f"Le code est : {mot_de_pass}\n")
+
+pop = Population(taille_pop, size)
+
+while True:
+eval = FitnessPop(mot_de_pass, pop)
+if mot_de_pass in pop:
+print(f"Trouve au bout de la {generation + 1}eme generation")
+print(pop[len(pop)-1])
+
+parents = Eugenisme(pop, eval, taux_conservation)
+enfants = [Mutation(Reproduction(parents, size), taux_mutation) for _ in range(taille_pop - len(parents))]
+
+generation += 1
+pop = parents + enfants
+
+pop.sort(key=lambda x: Fitness(mot_de_pass, x)[0], reverse=True)
+\end{lstlisting}
+\vspace{0.2cm}
+J'ai donc utilisé une boucle while qui est plus rapide qu'une boucle for (car l'algorithme est lourd, autant l'optimiser avec ceci).\\
+La première partie est dédier à l'initialisation de notre population et de notre code secret (nommé "mot$\_$de$\_$pass"). \\
+La seconde partie, dédié à la résolution du problème dans un premier temps, évalue notre population avec la fonction FitnessPop (cf \ref{fitness}). Ensuite, nous allons modifier la liste des parents avec la sélection (cf \ref{eugenisme}), la reporduction et les mutations (cf \ref{mutation}).
+\chapter{Analyse comportementale}
+Durant cette partie, nous allons observer les diverses manières pour tester les programmes que j'ai réalisés. Dans un premier temps, j'ai réalisé des tests en modifiant la taille du code secret, puis en modifiant le faut de conservation pour les populations et enfin le taux de mutation. Nous allons donc voir les courbes relatives au temps de ces dernières.
+\section{Variation de la taille}
+Dans un premier temps, nous allons faire varier la taille de 1 à 50 pour voir le temps que l'algorithme met à trouver la solution et aussi le temps que le nombre d'itérations que l'algorithme effectué pour chaque test. J'ai utilisé les paramètres suivants pour effectuer ceci :
+\begin{itemize}
+\item taille = x
+\item taux de conservation = 0.6
+\item taux de mutation = 0.05
+\end{itemize}
+\begin{figure}[!htb]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=1\linewidth]{images/temps-taille.jpg}
+     \caption{taille = f(temps)}\label{Fig:Data1-1}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=1\linewidth]{images/nbr-iteration-taille.jpg}
+     \caption{taille = f(iteration)}\label{Fig:Data2-1}
+   \end{minipage}
+\end{figure}
+Il y a des imperfections sur les deux courbes, mais nous remarquons le caractère exponentiel de la courbe du temps et le caractère linéaire de la seconde.
+
+\newpage
+
+\section{Variation du taux de conservation}
+Nous allons maintenant faire varier le taux de conservation (je n'ai pas trouvé un meilleur nom, mais je ne voyais pas comment le nommer sinon). Pour ce faire, nous allons le faire varier de 0.1 à 0.9 (car le faire démarrer de 0 ou le faire finir à 1 n'as aucun intérêt) avec un incrément de 0.01 à chaque fois. Les autres paramètres seront :
+\begin{itemize}
+\item taille = 20
+\item taux de conservation = x
+\item taux de mutation = 0.05
+\end{itemize}
+\begin{figure}[!htb]
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=1\linewidth]{images/temps-repo.jpg}
+     \caption{taux$\_$concervation = f(temps)}\label{Fig:Data1-1}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\textwidth}
+     \centering
+     \includegraphics[width=1\linewidth]{images/nbr-iteration-repo.jpg}
+     \caption{taux$\_$concervation = f(iteration)}\label{Fig:Data2-2}
+   \end{minipage}
+\end{figure}
+
+\newpage
+
+\section{Variation du taux de mutation}
+\label{taux mutation}
+Pour finir, nous allons faire varier le taux de mutation. Pour ce faire, nous allons le faire varier de 0.05 à 0.3 car comme nous allons le voir, ceci demande déjà beaucoup de temps pour les dernières itérations. Les paramètres seront donc :
+\begin{itemize}
+\item taille = 20
+\item taux de conservation = 0.6
+\item taux de mutation = x
+\end{itemize}
+\begin{figure}[!htb]
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=1\linewidth]{images/temps-mutation.jpg}
+\caption{taux$\_$mutation = f(temps)}\label{Fig:Data1-3}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=1\linewidth]{images/nbr-iteration-mutation.jpg}
+\caption{taux$\_$mutation = f(iteration)}\label{Fig:Data2-3}
+\end{minipage}
+Nous voyons donc par ses graphes que le taux de mutation affecte beaucoup les performances de notre algorithme. Il faut donc le conserver suffisamment bas pour que notre complexité ne soit pas aberrante.
+\end{figure}
+
+\chapter*{Conclusion}
+
+Ce projet a été très intéressant, je n'ai mal heureusement pas réussi à faire converger mon algorithme pour UMM++ ce qui me déçoit un peu. J'ai donc pu remarquer notamment au travers de la variation du taux de mutation, qu'un paramètre modifier légèrement, pourrais avoir des conséquences désastreuses sur la complexité d'un algorithme (cf \ref{taux mutation}). \\ \\
+Je pense, d'autre part que pour ceux n'ayant pas appris à programmer (notamment en python) au préalable auraient pu avoir beaucoup de mal avec le projet est peu guidé (ce qui est le but d'un projet).\\ \\
+
+Le projet est très pertinent, car nous avons pu découvrir le fonctionnement d'algorithme génétique.
+\end{document}

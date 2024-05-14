@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "4703306b76698e00",
+    "type": "split",
+    "children": [
+      {
+        "id": "e83ee14dde7d4d80",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c3b4b686ea2608f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CM3.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "67960f3edbca7c9f",
+    "type": "split",
+    "children": [
+      {
+        "id": "90a2e581d1586fe5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a38d50be967cb186",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e9964fec1d43d953",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#java",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1f7d6d81066adc9a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "3136d9582be71472",
+    "type": "split",
+    "children": [
+      {
+        "id": "7919789b40894afb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c552fef48efa3e5f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CM3.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ff7352e1daaf976d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CM3.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "69d2ce869f3cee65",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "72d4d833f62ad398",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CM3.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "c3b4b686ea2608f3",
+  "lastOpenFiles": [
+    "CM3.md",
+    "ce-qui-va-pas.md",
+    "RNG/CM2.md",
+    "programation-web/CSS.md",
+    "logique-matematique/TP-de-merde-avec-in-pour-Ewan-de-merde.zip",
+    "logique-matematique/TP2/TP2-out.zip",
+    "logique-matematique/TP2/TP2-out/exercice5.out",
+    "logique-matematique/TP2/TP2-out/exercice4.out",
+    "logique-matematique/TP2/TP2-out/exercice2-4.out",
+    "logique-matematique/TP2/TP2-out/exercice2-3.out",
+    "logique-matematique/TP2/TP2-out/exercice2-2.out",
+    "logique-matematique/TP2/TP2-out/exercice2-1.out",
+    "logique-matematique/TP2/TP2-out/exercice1.out",
+    "logique-matematique/TP2/exercice5.out",
+    "logique-matematique/compte-rendu.md",
+    "RNG/la-rng-me-chier-dessus-en-CM.md",
+    "modelisation-objet-avance/description-textuel.md",
+    "modelisation-objet-avance/projet/ajouter-un-article-au-site.png",
+    "modelisation-objet-avance/projet/identification.png",
+    "modelisation-objet-avance/projet/gerer-les-reclamations.png",
+    "modelisation-objet-avance/projet/Passer-une-commande-en-ligne.png",
+    "modelisation-objet-avance/projet/Ajouter-un-produit-au-panier.png",
+    "modelisation-objet-avance/projet/Consulter-les-produits.png",
+    "modelisation-objet-avance/projet/diagramme-de-cas9dutilisation.png",
+    "modelisation-objet/projet/Consulter-les-produits.png",
+    "ingenerie-systeme/Analyse-fonctionel-technique-solution.md",
+    "ingenerie-systeme/AOT-Analyse-organique-technique.md",
+    "ingenerie-systeme/choix-des-solutions.md",
+    "ingenerie-systeme/EXI_BC-exigencesdu-besoin-constituant.md",
+    "assembleur/assembleur-CM.md",
+    "programation-web/CM1.md",
+    "assembleur/masm32/vkdebug/dbgwin/icons/save.bmp",
+    "assembleur/masm32/vkdebug/dbgwin/icons/open.bmp",
+    "anglais/25-march.md",
+    "ignimission.md",
+    "assembleur.md",
+    "programation-objet/Projet/bataille-navale/README.md",
+    "annalyse-de-risque/chapitre-2.md",
+    "DGSI.md",
+    "journee-2.md",
+    "english-18-mars.md",
+    "programation-objet/CM4 1.md",
+    "anglais/english.md",
+    "mobilite-RETEX.md",
+    "modelisation-objet-avance/diagramme-etat-transition.md",
+    "modelisation-objet-avance/cours.md"
+  ]
+}

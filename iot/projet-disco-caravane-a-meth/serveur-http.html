@@ -1,0 +1,24 @@
+<html><head><meta charset="utf-8"><title>Contrôle Lua RTOS</title></head><body>
+    <h1>Contrôle Lua RTOS</h1>
+        <form action="disco.lua" target="fd">
+            <button type="submit">disco</button>
+        </form>
+        <br>
+
+        <form action="door.lua" target="fd">
+            <button type="submit">door</button>
+        </form>
+        <br>
+        
+            <label for="CodePlaque">Insérer le code de la plaque</label>
+            <input type="text" id="CodePlaque" name="CodePlaque">
+        <form>
+            <button type="submit"> Entrer le code </button>
+            <?lua
+                changeImat(CodePlaque)
+            ?>
+        </form>
+        
+    </body>
+</html>
+

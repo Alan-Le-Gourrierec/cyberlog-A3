@@ -1,0 +1,2 @@
+il manque de doc sur la création de page
+préciser qu'il faut remove le fichier "www/index.luap" à chaque changement du code

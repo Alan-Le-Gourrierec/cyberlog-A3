@@ -1,0 +1,76 @@
+============================== Mace4 =================================
+Mace4 (64) version 2009-11A, November 2009.
+Process 9251 was started by alan on julien777hx,
+Wed Apr 10 16:06:54 2024
+The command was "mace4 -c -p 1".
+============================== end of head ===========================
+
+============================== INPUT =================================
+set(binary_resolution).
+WARNING, Flag not recognized: set(binary_resolution).
+clear(print_initial_clauses).
+WARNING, Flag not recognized: clear(print_initial_clauses).
+clear(print_kept).
+WARNING, Flag not recognized: clear(print_kept).
+clear(print_given).
+WARNING, Flag not recognized: clear(print_given).
+assign(max_seconds,10).
+assign(stats,none).
+WARNING, Parameter not recognized: assign(stats,none).
+
+formulas(assumptions).
+end_of_list.
+
+formulas(goals).
+-(-p | -(-q -> r)).
+end_of_list.
+    % set(print_models_tabular) -> clear(print_models).
+
+% From the command line: set(print_models_tabular).
+
+============================== end of input ==========================
+
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
+
+% Formulas that are not ordinary clauses:
+1 -(-p | -(-q -> r)) # label(non_clause) # label(goal).  [goal].
+
+============================== end of process non-clausal formulas ===
+
+============================== CLAUSES FOR SEARCH ====================
+
+formulas(mace4_clauses).
+-p | -q.
+-p | -r.
+end_of_list.
+
+============================== end of clauses for search =============
+
+% There are no natural numbers in the input.
+
+============================== DOMAIN SIZE 2 =========================
+
+ p : 0
+
+ q : 0
+
+ r : 0
+
+============================== STATISTICS ============================
+
+For domain size 2.
+
+Current CPU time: 0.00 seconds (total CPU time: 0.00 seconds).
+Ground clauses: seen=2, kept=2.
+Selections=3, assignments=3, propagations=0, current_models=1.
+Rewrite_terms=0, rewrite_bools=2, indexes=0.
+Rules_from_neg_clauses=0, cross_offs=0.
+
+============================== end of statistics =====================
+
+User_CPU=0.00, System_CPU=0.00, Wall_clock=0.
+
+Exiting with 1 model.
+
+Process 9251 exit (max_models) Wed Apr 10 16:06:54 2024
+The process finished Wed Apr 10 16:06:54 2024

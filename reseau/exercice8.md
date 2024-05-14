@@ -1,0 +1,2 @@
+### a. entre trame 22 et 33 <br>
+Nous avaons rencontré un **problème** lors de la connection $\rightarrow$ il y à donc 11 trames d'écarts, le temps que notre receveur obtienne à nouveau le paquet manquant (le paquet n° 187)

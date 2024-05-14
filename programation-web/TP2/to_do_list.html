@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="to_do_list.css">
+    <title>Application Todo list en JS</title>
+</head>
+<body>
+    <h1 class="titre">Application Todo list en JS</h1>
+    <div id="main_panel">
+        <div class="maincontainer">
+            <div class="container" style="flex: 3.5;">
+                <input type="text" id="taskInput" placeholder="ajouter le titre d'une tache ici.">
+                <button class="button-style" onclick="addTask()">
+                    <img src="images/plus.png" alt="plus icone en jpg">
+                </button>
+            </div>
+            <div class="container" style="flex: 1;">
+                <select id="menu" name="cars"> 
+                    <option value="toutes les task">toutes les task</option> 
+                </select>
+            </div>      
+        </div>
+    </div>
+    <div>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="to_do_list.js"></script>
+</body>
+</html>
+

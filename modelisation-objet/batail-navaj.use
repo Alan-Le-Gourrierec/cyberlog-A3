@@ -1,0 +1,9 @@
+model Bataille-Naval
+
+enum abscisse {A,B,C,D,E,F,G,H,I,J}
+
+class Plateau 
+attributes
+   name : String
+operation
+   

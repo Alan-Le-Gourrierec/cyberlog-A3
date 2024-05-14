@@ -1,0 +1,15 @@
+// Precondition : les listes A et B ne sont pas nuls
+
+Fusion(liste A, liste B):
+liste C = []
+int z,int x = NULL,0
+  while x<(longueur(A+B)):
+  y = x
+    while y<(longueur(A+B)):
+      if z == NULL:
+        z = C[y]
+      if C[y] < z:
+        z = C[y]
+      y = y + 1
+    x = x + 1
+  return C

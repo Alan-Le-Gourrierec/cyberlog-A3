@@ -1,0 +1,15 @@
+============================== Mace4 =================================
+Mace4 (64) version 2009-11A, November 2009.
+Process 10839 was started by alan on julien777hx,
+Wed Apr 10 16:42:53 2024
+The command was "mace4 -c -p 1".
+============================== end of head ===========================
+
+============================== INPUT =================================
+%%ERROR: A term cannot be constructed from the marked string:
+
+
+%%START ERROR%%for x P(x,x).%%END ERROR%%
+
+Fatal error:  sread_term error
+

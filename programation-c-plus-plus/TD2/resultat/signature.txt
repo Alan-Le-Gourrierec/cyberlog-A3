@@ -1,0 +1,127 @@
+"result.txt" 641a77cdce4319daccedda5f12845b520c8c9b61
+"test"
+"TD2"
+"TD2-test.cpp" a789ed4b52292cc0240a72529175cdca78f6093d
+"build"
+"Debug"
+"exercice1.o" 84d2632f47d8913d528b877c5be0e2e0fe706089
+"dijkstra.o" 9ec5dbf7d5aa4c9470b0987cf4dd0fc0ffba2c26
+"TD2-bibliotheque.o" 9bc6597665ce449f489a86fecae3bbb48443c009
+"TD2-test.o" 8bd2bc27865dfd0acfaac89ae7747c993cbfb13a
+"test.o" 8c0d1fa4ddaa4b14ad29b8630efbe2112384baec
+"test2.o" 2de856cb96d93dfa1f3760a827e372f1cc22b180
+"TD2-signature.o" 0e7d642cabe2d5b6f5787894c60d52ebc613cd20
+"example"
+"net_2022_04_23_03_49_33_flow_3_0_NC.dat" 4046b4b68f29be47831cb6ca003b6e7cc031f2d6
+"net_2022_04_23_03_49_33_flow_3_1_NC.dat" 0907d1599a8abc26c9ce16d51c52807a9303200c
+"net_2022_04_23_03_49_33_flow_3_2_NC.dat" bbf103949afb24a8f5e53d9d5c21cd2d68298271
+"net_2022_04_23_03_49_33_flow_3_3_NC.dat" af169346b721ca17861acf8484bf8927fb44d683
+"net_2022_04_23_03_49_33_flow_3_NC.dat" 743dccd5802c9e7b4ed5357b5dfd303ce6d60c1d
+"net_2022_04_23_03_49_33_flow_3_NC.dem" 3fcb370b97bd26d5761c9f91ee544caa24c80234
+"net_2022_04_23_03_49_33Node1.dat" 0b73158ea3cb3a80ffdd0ad573e34083de4f9f40
+"dijkstra.cpp" d6096c7b4bb27f187a5f5069dac302ac98d03c76
+"TD2-bibliotheque.cpp" 966ef3b505f7747fe19bd9cb9143df71dcf77b91
+"Examples"
+"papillonavecnoeudinitialetterminalpardelegation.csv" 71bb84d53796b025be442e5cd3c869ec270a0ea9
+"test64.csv" 113e1d3ca755130494a3c0bd96a4c9f7eb4216d9
+"test_paper.csv" 28957c48227ef8eabc789fa99098c52d83ea6f96
+"test_paper_2.csv" 870b50f2e9754e8e0cfa7d906674626c1d48d1b4
+"testv44.csv" a9044dd47a5ff15566c47e65975621ce4e7ed634
+"X.csv" 8ae78c10cc70cfcc39675edff52303f1a1c30a99
+"X2.csv" 2b6c40afa7bf8b3e1cca021739e6a764b44dae7b
+"X3.csv" ddb34028403222fa18f012760926ace6712669f5
+"X4.csv" 1d5a624703df2a9dffd09500c279bafd2373569e
+"X5.csv" da55311537a259e4b8cbc1b8eea98870f67047b1
+"X7.csv" 915b4b8d5af92929902eac061b850ee6e6d01269
+"X6.csv" 4e4d9d1c3379b496054e4a18ed63b91e0cbd12e8
+"X8.csv" 492b24167ed4b1fa9092006e94fe6ed1b454b2f3
+"X9.csv" e2292c81f67ee06de1179d00c9cfe90a7247e383
+"resultat"
+"datafile_gnu.dat" b53415da77594ef9e3084e8f92e2e3a1e822028b
+"result.txt" 641a77cdce4319daccedda5f12845b520c8c9b61
+"signature.txt" dfec4cc3236b1fef6b827b0cd5a9e90f1c776ffa
+"test"
+"TD2"
+"TD2-test.cpp" a789ed4b52292cc0240a72529175cdca78f6093d
+"build"
+"Debug"
+"exercice1.o" 84d2632f47d8913d528b877c5be0e2e0fe706089
+"dijkstra.o" 9ec5dbf7d5aa4c9470b0987cf4dd0fc0ffba2c26
+"TD2-bibliotheque.o" 9bc6597665ce449f489a86fecae3bbb48443c009
+"TD2-test.o" 8bd2bc27865dfd0acfaac89ae7747c993cbfb13a
+"test.o" 8c0d1fa4ddaa4b14ad29b8630efbe2112384baec
+"test2.o" 2de856cb96d93dfa1f3760a827e372f1cc22b180
+"TD2-signature.o" 0e7d642cabe2d5b6f5787894c60d52ebc613cd20
+"example"
+"net_2022_04_23_03_49_33_flow_3_0_NC.dat" 4046b4b68f29be47831cb6ca003b6e7cc031f2d6
+"net_2022_04_23_03_49_33_flow_3_1_NC.dat" 0907d1599a8abc26c9ce16d51c52807a9303200c
+"net_2022_04_23_03_49_33_flow_3_2_NC.dat" bbf103949afb24a8f5e53d9d5c21cd2d68298271
+"net_2022_04_23_03_49_33_flow_3_3_NC.dat" af169346b721ca17861acf8484bf8927fb44d683
+"net_2022_04_23_03_49_33_flow_3_NC.dat" 743dccd5802c9e7b4ed5357b5dfd303ce6d60c1d
+"net_2022_04_23_03_49_33_flow_3_NC.dem" 3fcb370b97bd26d5761c9f91ee544caa24c80234
+"net_2022_04_23_03_49_33Node1.dat" 0b73158ea3cb3a80ffdd0ad573e34083de4f9f40
+"dijkstra.cpp" d6096c7b4bb27f187a5f5069dac302ac98d03c76
+"TD2-bibliotheque.cpp" 966ef3b505f7747fe19bd9cb9143df71dcf77b91
+"Examples"
+"papillonavecnoeudinitialetterminalpardelegation.csv" 71bb84d53796b025be442e5cd3c869ec270a0ea9
+"test64.csv" 113e1d3ca755130494a3c0bd96a4c9f7eb4216d9
+"test_paper.csv" 28957c48227ef8eabc789fa99098c52d83ea6f96
+"test_paper_2.csv" 870b50f2e9754e8e0cfa7d906674626c1d48d1b4
+"testv44.csv" a9044dd47a5ff15566c47e65975621ce4e7ed634
+"X.csv" 8ae78c10cc70cfcc39675edff52303f1a1c30a99
+"X2.csv" 2b6c40afa7bf8b3e1cca021739e6a764b44dae7b
+"X3.csv" ddb34028403222fa18f012760926ace6712669f5
+"X4.csv" 1d5a624703df2a9dffd09500c279bafd2373569e
+"X5.csv" da55311537a259e4b8cbc1b8eea98870f67047b1
+"X7.csv" 915b4b8d5af92929902eac061b850ee6e6d01269
+"X6.csv" 4e4d9d1c3379b496054e4a18ed63b91e0cbd12e8
+"X8.csv" 492b24167ed4b1fa9092006e94fe6ed1b454b2f3
+"X9.csv" e2292c81f67ee06de1179d00c9cfe90a7247e383
+"resultat"
+"datafile_gnu.dat" b53415da77594ef9e3084e8f92e2e3a1e822028b
+"result.txt" 641a77cdce4319daccedda5f12845b520c8c9b61
+"signature.txt" dfec4cc3236b1fef6b827b0cd5a9e90f1c776ffa
+"test"
+"TD2"
+"TD2-test.cpp" a789ed4b52292cc0240a72529175cdca78f6093d
+"build"
+"Debug"
+"exercice1.o" 84d2632f47d8913d528b877c5be0e2e0fe706089
+"dijkstra.o" 9ec5dbf7d5aa4c9470b0987cf4dd0fc0ffba2c26
+"TD2-bibliotheque.o" 9bc6597665ce449f489a86fecae3bbb48443c009
+"TD2-test.o" 8bd2bc27865dfd0acfaac89ae7747c993cbfb13a
+"test.o" 8c0d1fa4ddaa4b14ad29b8630efbe2112384baec
+"test2.o" 2de856cb96d93dfa1f3760a827e372f1cc22b180
+"TD2-signature.o" 0e7d642cabe2d5b6f5787894c60d52ebc613cd20
+"example"
+"net_2022_04_23_03_49_33_flow_3_0_NC.dat" 4046b4b68f29be47831cb6ca003b6e7cc031f2d6
+"net_2022_04_23_03_49_33_flow_3_1_NC.dat" 0907d1599a8abc26c9ce16d51c52807a9303200c
+"net_2022_04_23_03_49_33_flow_3_2_NC.dat" bbf103949afb24a8f5e53d9d5c21cd2d68298271
+"net_2022_04_23_03_49_33_flow_3_3_NC.dat" af169346b721ca17861acf8484bf8927fb44d683
+"net_2022_04_23_03_49_33_flow_3_NC.dat" 743dccd5802c9e7b4ed5357b5dfd303ce6d60c1d
+"net_2022_04_23_03_49_33_flow_3_NC.dem" 3fcb370b97bd26d5761c9f91ee544caa24c80234
+"net_2022_04_23_03_49_33Node1.dat" 0b73158ea3cb3a80ffdd0ad573e34083de4f9f40
+"dijkstra.cpp" d6096c7b4bb27f187a5f5069dac302ac98d03c76
+"TD2-bibliotheque.cpp" 966ef3b505f7747fe19bd9cb9143df71dcf77b91
+"Examples"
+"papillonavecnoeudinitialetterminalpardelegation.csv" 71bb84d53796b025be442e5cd3c869ec270a0ea9
+"test64.csv" 113e1d3ca755130494a3c0bd96a4c9f7eb4216d9
+"test_paper.csv" 28957c48227ef8eabc789fa99098c52d83ea6f96
+"test_paper_2.csv" 870b50f2e9754e8e0cfa7d906674626c1d48d1b4
+"testv44.csv" a9044dd47a5ff15566c47e65975621ce4e7ed634
+"X.csv" 8ae78c10cc70cfcc39675edff52303f1a1c30a99
+"X2.csv" 2b6c40afa7bf8b3e1cca021739e6a764b44dae7b
+"X3.csv" ddb34028403222fa18f012760926ace6712669f5
+"X4.csv" 1d5a624703df2a9dffd09500c279bafd2373569e
+"X5.csv" da55311537a259e4b8cbc1b8eea98870f67047b1
+"X7.csv" 915b4b8d5af92929902eac061b850ee6e6d01269
+"X6.csv" 4e4d9d1c3379b496054e4a18ed63b91e0cbd12e8
+"X8.csv" 492b24167ed4b1fa9092006e94fe6ed1b454b2f3
+"X9.csv" e2292c81f67ee06de1179d00c9cfe90a7247e383
+"resultat"
+"datafile_gnu.dat" b53415da77594ef9e3084e8f92e2e3a1e822028b
+"result.txt" 641a77cdce4319daccedda5f12845b520c8c9b61
+"signature.txt" dfec4cc3236b1fef6b827b0cd5a9e90f1c776ffa
+"test"
+"log"
+"signature.txt" a94705497a00ca29ba341bab0d192b32a948efe5
